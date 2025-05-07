@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction, Router } from "express";
-import { Insert, Select } from '../database/actions';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import ParticipantsService from "./ParticipantsService";
 import JudgesService from "./JudgesService";

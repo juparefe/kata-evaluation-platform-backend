@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction, Router } from "express";
 import { Insert, Select } from '../database/actions';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 export default class JudgesService {
     router = Router();
@@ -40,7 +40,7 @@ export default class JudgesService {
                 return res.status(400).json({ message: "Nombre, correo y contraseña son requeridos" });
             }
 
-            const password_hash = await bcrypt.hash(password, 10);
+            const password_hash = await bcrypt.hash(password,10);
 
             const payload = {
                 full_name,

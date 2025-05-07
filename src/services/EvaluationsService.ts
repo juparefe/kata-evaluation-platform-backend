@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction, Router } from "express";
 import { Insert, Select } from '../database/actions';
-import bcrypt from 'bcrypt';
 
 export default class EvaluationsService {
     router = Router();
